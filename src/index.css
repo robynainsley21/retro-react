@@ -14,7 +14,7 @@
   --black: #1f1717;
   --yellow: #f4e869;
   --oceanblue: #3085c3;
-  --orange: #FC6736;
+  --orange: #fc6736;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -122,7 +122,18 @@
 
 /*navbar*/
 .navbar {
-  background-color: var(--peach);
+  background-color: #f4bf96;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 95%;
+  height: 15%;
+  margin: 1rem auto;
+  padding: 0;
+  border-radius: 5px;
+  font-family: "Share Tech Mono", monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 /*navbar*/
 
@@ -131,7 +142,6 @@ a {
   color: pink;
   text-decoration: none;
   background-color: none;
-
 }
 a:hover {
   color: pink;
@@ -141,7 +151,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.btn{
+.btn {
   border: #1f1717 1px solid;
 }
 
@@ -176,20 +186,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+img[alt="logo"] {
+  width: 3rem;
+}
+
 /*navbar*/
 
 /*HOME*/
 #home {
   font-family: "Poppins", monospace;
   height: 100vh;
-  padding-top: 2rem;
+  padding-top: 8rem;
   background-color: var(--bg);
-
-  & h1 {
-    font-family: "Share Tech Mono", monospace;
-    font-size: 4rem;
-    text-align: center;
-  }
 
   & h2 {
     font-family: "Share Tech Mono", monospace;
@@ -210,39 +219,33 @@ img[alt="home-img"] {
   align-items: center;
   height: 60vh;
   gap: 1rem;
-  
-  & p{
+
+  & p {
     text-align: center;
     margin: auto;
   }
 }
 
-.home-link{
+.home-link {
   color: inherit;
 
-  & svg{
+  & svg {
     margin: auto;
   }
 }
 
-.home-info{
+.home-info {
   display: flex;
   flex-direction: column;
 }
 
-/* .home-socials{
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1rem;
-} */
-
 /*image border*/
 .cube {
   position: relative;
-  width: 17.02rem; 
+  width: 17.02rem;
   height: 17.02rem;
 
-  border-radius: 100%; 
+  border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,7 +266,7 @@ img[alt="home-img"] {
 }
 .cube::after {
   content: "";
-  border-radius: 100%; 
+  border-radius: 100%;
   position: absolute;
   inset: 2px;
   z-index: -1;
@@ -279,7 +282,7 @@ img[alt="home-img"] {
 /*image border*/
 
 /*socials*/
-/* From Uiverse.io by david-mohseni */ 
+/* From Uiverse.io by david-mohseni */
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -350,7 +353,7 @@ img[alt="home-img"] {
 .wrapper .linkedIn:hover,
 .wrapper .linkedIn:hover .tooltip,
 .wrapper .linkedIn:hover .tooltip::before {
-  background: 	#0077b5;
+  background: #0077b5;
   color: #fff;
 }
 
@@ -364,9 +367,139 @@ img[alt="home-img"] {
 
 /*HOME*/
 
+/* ABOUT */
+#about {
+  margin-top: 8rem;
+
+  & h1 {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+
+img[alt="about-img"] {
+  width: 15rem;
+  margin: auto;
+}
+
+.about-text {
+  padding: 2rem;
+}
+
+.about-hero {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 3rem;
+}
+.col-item {
+  width: 50%;
+  text-align: center;
+}
+
+.about-body{
+  height: 100vh;
+  /* width: 95vw; */
+  margin: auto;
+  background-color: var(--oceanblue);
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+
+  & h2{
+    font-family: "Share Tech Mono", monospace;
+    font-size: 3.2rem;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+.interest-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* ABOUT */
+
+/*FOOTER*/
+.footer {
+  text-align: center;
+  background-color: var(--yellow);
+  /* margin-top: 2rem; */
+  position: sticky;
+  padding: 1.5rem;
+  font-family: "Share Tech Mono", sans-serif;
+  font-size: 1.2rem;
+}
+/*FOOTER*/
+
 /*MEDIA QUERIES*/
 /*mobile*/
 @media screen and (max-width: 768px) {
+  /**Home*/
   .home-hero {
     margin-top: 2rem;
     display: flex;
@@ -376,9 +509,8 @@ img[alt="home-img"] {
     gap: 1rem;
     height: auto;
 
-    & p{
+    & p {
       width: 90%;
-
     }
   }
 
@@ -388,9 +520,7 @@ img[alt="home-img"] {
   }
 
   #home {
-    & h1 {
-      font-size: 3rem;
-    }
+    padding-top: 6rem;
 
     & h2 {
       font-family: "Share Tech Mono", monospace;
@@ -399,9 +529,40 @@ img[alt="home-img"] {
     }
   }
 
-  .cube{
-    width: 13.02rem; 
+  .cube {
+    width: 13.02rem;
     height: 13.02rem;
   }
+  /**Home*/
+
+  /**About*/
+  .about-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .col-item {
+    width: 95%;
+    text-align: center;
+  }
+
+  .about-text {
+    padding: 1rem;
+  }
+
+  #about {
+    margin-top: 6rem;
+  
+    & h1 {
+      font-family: "Share Tech Mono", monospace;
+      font-size: 3.5rem;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+  }
+  /**About*/
 }
 /*mobile*/

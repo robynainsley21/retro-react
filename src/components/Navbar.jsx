@@ -1,93 +1,83 @@
-import * as React from "react";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
-import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import About from "../pages/About.jsx";
-import Home from "../pages/Home.jsx";
-import Contact from "../pages/Contact.jsx";
-import Projects from "../pages/Projects.jsx";
-import Skills from "../pages/Skills.jsx";
+import { Link } from "react-router-dom";
 
-
-const CustomTabPanel = (props) => {
-  const { children, value, index, ...other } = props;
-
+export default function Navbar() {
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-    </div>
-  );
-};
-
-const a11yProps = (index) => {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-};
-
-export default function BasicTabs() {
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  return (
-    <Router className="navbar">
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            <Tab label="Home" {...a11yProps(0)} component={Link} to="/" />
-            <Tab
-              label="About"
-              {...a11yProps(1)}
-              component={Link}
-              to="/about"
-            />
-            <Tab
-              label="Skills"
-              {...a11yProps(2)}
-              component={Link}
-              to="/skills"
-            />
-            <Tab label="Projects" {...a11yProps(3)} component={Link} to="/projects" />
-            <Tab label="Contact" {...a11yProps(4)} component={Link} to="/contact" />
-            
-          </Tabs>
-        </Box>
-
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home />
-            }
+    <nav className="navbar navbar-expand-lg fixed-top">
+      <div className="container-fluid p-3">
+        <Link className="navbar-brand" to="/">
+          <img
+            src="https://robynainsley21.github.io/images/images/Portfolio logo (1).png"
+            alt="logo"
+            loading="lazy"
           />
-          <Route
-            path="/about"
-            element={
-              <About />
-            }
-          />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-         
-        </Routes>
-      </Box>
-    </Router>
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="offcanvas offcanvas-end"
+          tabIndex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div className="offcanvas-header">
+            <Link className="navbar-brand" to="/">
+              <img
+                src="https://robynainsley21.github.io/images/images/Portfolio logo (1).png"
+                alt="logo"
+                loading="lazy"
+              />
+            </Link>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="offcanvas-body">
+            <ul className="navbar-nav fw-bolder ms-auto">
+              <li className="nav-item">
+                <Link className="nav-link font-weight-bold" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/resume">
+                  Resume
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/skills">
+                  Skills
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/projects">
+                  Projects
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }

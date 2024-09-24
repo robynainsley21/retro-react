@@ -1,16 +1,24 @@
 import React, { useContext } from "react";
-import { DataContext } from "../components/DataProvider";
+import { useState, useEffect } from "react";
+
 import Loader from "../components/Loader";
 
 export default function Home() {
-  const data = useContext(DataContext);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("https://robynainsley21.github.io/vue-data-eomp/data/")
+      .then((response) => response.json())
+      .then((jsonData) => setData(jsonData))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   if (!data) {
     return <Loader />;
   }
 
   return (
     <div id="home">
-      <h1>Hi, I'm Robyn</h1>
       <div className="home-hero">
         <div className="cube">
           <img loading="lazy" src={data.jobTitle[0].img_url} alt="home-img" />
