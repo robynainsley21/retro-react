@@ -174,19 +174,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 img[alt="logo"] {
   width: 3rem;
 }
@@ -419,70 +406,114 @@ img[alt="about-img"] {
   justify-content: space-evenly;
 }
 
-/* From Uiverse.io by gharsh11032000 */ 
+
+
+
+
+/* ABOUT */
+
+/* PROJECTS */
+
+#projects {
+  margin-top: 8rem;
+  & h1 {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+
+img[alt="project-img"]{
+  width: 100%;
+}
+
+/* From Uiverse.io by andrew-demchenk0 */ 
 .card {
+  --main-color: #000;
+  --submain-color: #78858F;
+  --bg-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   position: relative;
   width: 300px;
-  height: 200px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
+  height: 384px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  perspective: 1000px;
-  box-shadow: 0 0 0 5px #ffffff80;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 20px;
+  background: var(--bg-color);
 }
 
-.card svg {
-  width: 48px;
-  fill: #333;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-.card__content {
-  position: absolute;
-  top: 0;
-  left: 0;
+.card__img {
+  height: 192px;
   width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card:hover .card__content {
-  transform: rotateX(0deg);
+
+.card__avatar {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background: var(--bg);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 80px);
+}
+
+img[alt="lang-img"]{
+  width: 100%;
+}
+
+.card__avatar svg {
+  width: 100px;
+  height: 100px;
 }
 
 .card__title {
-  margin: 0;
-  font-size: 24px;
-  color: #333;
+  margin-top: 60px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.card__subtitle {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--submain-color);
+}
+
+.card__btn {
+  margin-top: 15px;
+  width: 76px;
+  height: 31px;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
   font-weight: 700;
+  font-size: 11px;
+  color: var(--main-color);
+  background: var(--bg-color);
+  text-transform: uppercase;
+  transition: all 0.3s;
 }
 
-.card:hover svg {
-  scale: 0;
+.card__btn-solid {
+  background: var(--main-color);
+  color: var(--bg-color);
 }
 
-.card__description {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: #777;
-  line-height: 1.4;
+.card__btn:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
 }
 
-/* ABOUT */
+.card__btn-solid:hover {
+  background: var(--bg-color);
+  color: var(--main-color);
+}
+/* PROJECTS */
 
 /*FOOTER*/
 .footer {
