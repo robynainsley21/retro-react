@@ -733,7 +733,7 @@ img[alt="project-img"] {
 
   .fine-text {
     color: var(--gray);
-    opacity: 0.8;
+    opacity: 0.5;
   }
 
   .project-card {

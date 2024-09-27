@@ -37,6 +37,8 @@ export default function About() {
       </div>
       <div className="about-body">
         <h2 data-aos="fade-up">Interests of mine</h2>
+        <p className="fine-text text-center mb-5">Hover to view details</p>
+
         <div className="interest-container row">
           {data.about[1].interests.map((item) => {
             return (
