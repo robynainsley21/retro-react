@@ -15,11 +15,6 @@
   --yellow: #f4e869;
   --oceanblue: #3085c3;
   --orange: #fc6736;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /*Loader*/
@@ -204,7 +199,7 @@ img[alt="home-img"] {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 60vh;
+  height: 100vh;
   gap: 1rem;
 
   & p {
@@ -385,7 +380,7 @@ img[alt="about-img"] {
   text-align: center;
 }
 
-.about-body{
+.about-body {
   height: 100vh;
   /* width: 95vw; */
   margin: auto;
@@ -393,7 +388,7 @@ img[alt="about-img"] {
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
 
-  & h2{
+  & h2 {
     font-family: "Share Tech Mono", monospace;
     font-size: 3.2rem;
     text-align: center;
@@ -401,14 +396,10 @@ img[alt="about-img"] {
   }
 }
 
-.interest-container{
+.interest-container {
   display: flex;
   justify-content: space-evenly;
 }
-
-
-
-
 
 /* ABOUT */
 
@@ -424,16 +415,17 @@ img[alt="about-img"] {
   }
 }
 
-img[alt="project-img"]{
+img[alt="project-img"] {
   width: 100%;
 }
 
-/* From Uiverse.io by andrew-demchenk0 */ 
+/* From Uiverse.io by andrew-demchenk0 */
 .card {
   --main-color: #000;
-  --submain-color: #78858F;
+  --submain-color: #78858f;
   --bg-color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   position: relative;
   width: 300px;
   height: 384px;
@@ -449,7 +441,6 @@ img[alt="project-img"]{
   width: 100%;
 }
 
-
 .card__avatar {
   position: absolute;
   width: 5rem;
@@ -462,7 +453,7 @@ img[alt="project-img"]{
   top: calc(50% - 80px);
 }
 
-img[alt="lang-img"]{
+img[alt="lang-img"] {
   width: 100%;
 }
 
@@ -586,7 +577,7 @@ img[alt="lang-img"]{
 
   #about {
     margin-top: 6rem;
-  
+
     & h1 {
       font-family: "Share Tech Mono", monospace;
       font-size: 3.5rem;

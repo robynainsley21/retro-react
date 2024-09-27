@@ -7,7 +7,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-import "./assets/css/styles.css";
+// import "./assets/css/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
