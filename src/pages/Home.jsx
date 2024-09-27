@@ -27,7 +27,7 @@ export default function Home() {
           <h2>Robyn Carnow</h2>
           <h5>{data.jobTitle[0].title}</h5>
           <div className="home-socials">
-            <ul class="wrapper">
+            <ul class="social-wrapper">
               <li class="icon linkedIn">
                 <span class="tooltip">LinkedIn</span>
                 <a
