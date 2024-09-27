@@ -1,5 +1,6 @@
 import Loader from "../components/Loader";
 import React, { useState, useEffect } from "react";
+import ProjectCard from "../components/ProjectCard";
 export default function Projects() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true); // New loading state
@@ -21,28 +22,21 @@ export default function Projects() {
 
   if (!data || !data.about) return <Loader />;
   return (
-    <div id="projects">
+    <div id="projects" className="row mt-5">
       <h1>Some of my projects</h1>
+      <p className="fine-text text-center mb-5">Hover to view details</p>
 
-      <div>
+    <div className="row">
         {data.projects.map((project) => (
-          /* From Uiverse.io by andrew-demchenk0 */
-          <div className="card">
-            <div className="card__img">
-              <img src={project.img_url} alt="project-img" />
-            </div>
-            <div className="card__avatar">
-              <img src={project.language_img} alt="lang-img" />
-            </div>
-            <div className="card__title">{project.projectName}</div>
-            <div className="card__subtitle">{project.description}</div>
-            <div className="card__wrapper">
-              <button className="card__btn">Button</button>
-              <button className="card__btn card__btn-solid">Button</button>
-            </div>
-          </div>
-        ))}
-      </div>
+        <ProjectCard
+          imageUrl={project.img_url}
+          title={project.projectName}
+          description={project.description}
+          github={project.github}
+          live={project.hosted_link}
+        />
+      ))}
+    </div>
     </div>
   );
 }
