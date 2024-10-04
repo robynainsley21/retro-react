@@ -13,7 +13,7 @@ export default function Home() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  if (!data) {
+  if (!data || !data.jobTitle) {
     return <Loader />;
   }
 

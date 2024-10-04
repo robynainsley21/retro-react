@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Education from "../components/Education";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
 
 export default function Resume() {
   const [data, setData] = useState(null);
@@ -26,6 +27,10 @@ export default function Resume() {
       <div className="divider"></div>
 
       <Skills data={data} loading={loading} />
+
+      <div className="divider"></div>
+
+      <Experience data={data} loading={loading}/>
     </>
   );
 }

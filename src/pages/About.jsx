@@ -4,7 +4,7 @@ import InterestCard from "../components/InterestCard.jsx";
 
 export default function About() {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true); // New loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://robynainsley21.github.io/vue-data-eomp/data/")

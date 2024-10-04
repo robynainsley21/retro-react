@@ -5,7 +5,7 @@ export default function Education({ data, loading }) {
   
     if (loading) return <Loader />;
   
-    if (!data || !data.about) return <Loader />;
+    if (!data || !data.education) return <Loader />;
 
     return(
         <>

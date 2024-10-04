@@ -1,6 +1,8 @@
 import Loader from "./Loader";
 export default function Skills({ data, loading }) {
   if (loading) return <Loader />;
+  if (!data || !data.skills) return <Loader />;
+
   return (
     <>
       <div className="row" id="skills">
