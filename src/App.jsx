@@ -7,7 +7,6 @@ import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
 import AllAchievements from "./pages/AllAchievements";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
@@ -29,7 +28,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/all-achievements" element={<AllAchievements />} />
       </Routes>
-      {/* <Footer /> */}
     </Router>
   );
 }

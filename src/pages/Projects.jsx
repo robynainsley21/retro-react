@@ -1,6 +1,7 @@
 import Loader from "../components/Loader";
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
+import { Link } from "react-router-dom";
 export default function Projects() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -38,7 +39,29 @@ export default function Projects() {
         ))}
       </div>
 
-      <div className="row github-row"><a className="p-auto" target="_blank" href="https://github.com/robynainsley21">Visit my GitHub</a></div>
+      <div className="row github-row">
+        {" "}
+        <Link target="_blank" to="https://github.com/robynainsley21">
+          {/* From Uiverse.io by alexmaracinaru  */}
+          <button class="cta">
+            <span class="hover-underline-animation">Visit my GitHub</span>
+            <svg
+              id="arrow-horizontal"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="10"
+              viewBox="0 0 46 16"
+            >
+              <path
+                id="Path_10"
+                data-name="Path 10"
+                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                transform="translate(30)"
+              ></path>
+            </svg>
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }

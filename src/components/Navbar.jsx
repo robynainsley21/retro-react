@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 export default function Navbar() {
   return (
@@ -59,11 +60,6 @@ export default function Navbar() {
                   Education & Experience
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <Link className="nav-link" to="/skills">
-                  Skills
-                </Link>
-              </li> */}
               <li className="nav-item">
                 <Link className="nav-link" to="/projects">
                   Projects
@@ -75,6 +71,7 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
+            <Footer />
           </div>
         </div>
       </div>
