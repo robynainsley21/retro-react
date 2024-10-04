@@ -4,8 +4,7 @@ const ProjectCard = ({ imageUrl, title, description, live, github, key }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="mb-3 m-auto" key={key}>
-
+    <div className="mb-3 m-auto col" key={key}>
       <div
         className="relative m-auto overflow-hidden cursor-pointer rounded-lg shadow-lg project-card m-auto"
         onMouseEnter={() => setIsHovered(true)}

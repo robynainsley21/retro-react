@@ -24,7 +24,7 @@ export default function Projects() {
   return (
     <div id="projects" className="row mt-5">
       <h1>Some of my projects</h1>
-      <p className="fine-text text-center mb-5">Hover to view details</p>
+      <p className="fine-text text-center mb-5">Hover image to view details</p>
 
       <div className="row">
         {data.projects.map((project) => (
@@ -37,6 +37,8 @@ export default function Projects() {
           />
         ))}
       </div>
+
+      <div className="row github-row"><a className="p-auto" target="_blank" href="https://github.com/robynainsley21">Visit my GitHub</a></div>
     </div>
   );
 }
