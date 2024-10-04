@@ -71,7 +71,7 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </div>
       </div>

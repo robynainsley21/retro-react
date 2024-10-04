@@ -389,6 +389,13 @@ img[alt="home-img"] {
   background: #24292e;
   color: #fff;
 }
+
+.social-wrapper .phone:hover,
+.social-wrapper .phone:hover .tooltip,
+.social-wrapper .phone:hover .tooltip::before {
+  background: var(--orange);
+  color: #fff;
+}
 /*socials*/
 
 /*HOME*/
@@ -632,7 +639,7 @@ a {
 .cta span {
   padding-bottom: 7px;
   letter-spacing: 4px;
-  font-size: 14px;
+  font-size: 15px;
   padding-right: 15px;
   text-transform: uppercase;
 }
@@ -749,8 +756,7 @@ img[alt="project-img"] {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 3rem;
-  
+  height: 4rem;  
 
   background: linear-gradient(to right, var(--oceanblue) 0%, var(--powder-blue) 19%, var(--yellow) 40%, var(--orange) 60%, var(--peach) 83%, var(--oceanblue) 100%);
   background-size: 10000px 100%;
@@ -836,11 +842,10 @@ img[alt="project-img"] {
 
 /* CONTACT */
 #contact {
-  height: 80vh;
+  margin-bottom: 2rem;
 }
 /* From Uiverse.io by G4b413l */
 .group {
-  position: relative;
   margin: 2rem;
 }
 
@@ -863,7 +868,6 @@ label {
   color: #999;
   font-size: 18px;
   font-weight: normal;
-  position: absolute;
   pointer-events: none;
   left: 5px;
   top: 10px;
@@ -935,6 +939,114 @@ label {
     background: transparent;
   }
 }
+/*form*/
+/* From Uiverse.io by D3OXY */ 
+/* DEOXY Was Here */
+.form {
+  --background: #d3d3d3;
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  padding: 20px;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  width: 25rem;
+}
+
+.form > p {
+  font-family: var(--font-DelaGothicOne);
+  color: var(--font-color);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > p > span {
+  font-family: var(--font-SpaceMono);
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.oauthButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+    /* margin: 50px auto 0 auto; */
+  padding: auto 15px 15px auto;
+  width: 250px;
+  margin: auto;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 250ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.form > input, textarea {
+  width: 90%;
+  margin: auto;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+textarea{
+  height: 7rem;
+}
+
+.contact-container{
+  margin-top: 2rem;
+  font-family: "Share Tech Mono", sans-serif;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-details{
+  font-size: 1.2rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+
+  & span{
+    font-size: 1.2rem;
+  }
+}
+
+.contact-item{
+  margin: 1rem ;
+}
+
+/*form*/
 
 /* From Uiverse.io by StarMarketPros */
 .wrapper {
@@ -947,6 +1059,7 @@ label {
   /* display: flex; */
   /* flex-direction: column; */
   /* align-items: center; */
+  margin: auto;
 }
 /* switch card */
 
@@ -1437,7 +1550,6 @@ img[alt="skill-img"] {
   margin-bottom: 1rem;
 }
 
-
 /*skills*/
 
 /*experience*/
@@ -1649,5 +1761,31 @@ font-size: 2.5rem;
     padding-bottom: 1.5rem;
   }
   /*EXPERIENCE*/
+
+  /*CONTACT*/
+  #contact h1{
+    font-size: 2.8rem;
+    width: 90%;
+    margin: auto;
+  }
+  .contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .contact-details{
+    margin:2rem auto ;
+  }
+
+  .form{
+    margin: 2rem auto;
+    width: 80%;
+
+    & :is(input, textarea, .oauthButton){
+      width: 100%;
+    }
+  }
+  /*CONTACT*/
 }
 /*mobile*/
