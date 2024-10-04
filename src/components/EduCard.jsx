@@ -5,7 +5,7 @@ export default function EduCard({ name, key, date, details, site, image }) {
       <div className="edu-card col" id={key}>
         <a className="card1" href={site} target="_blank">
           <img src={image} alt="edu-img" />
-          <p className="title">{name}</p>
+          <p className="edu-title">{name}</p>
           <p>{date}</p>
 
           <p className="small">{details}</p>

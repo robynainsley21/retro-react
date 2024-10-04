@@ -16,6 +16,7 @@
   --oceanblue: #3085c3;
   --orange: #fc6736;
   --gray: #686d76;
+  --powder-blue:#B4D6CD ;
 }
 
 /*scrollbar*/
@@ -69,7 +70,15 @@ li {
   list-style: none;
 }
 
-:is(#projects, #about, #contact, #education, #skills, #experience) {
+:is(
+    #projects,
+    #about,
+    #contact,
+    #education,
+    #skills,
+    #experience,
+    #all-achievements
+  ) {
   padding-top: 8rem;
   & h1 {
     font-family: "Share Tech Mono", monospace;
@@ -88,7 +97,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:2rem  auto;
+  margin: 2rem auto;
   height: 60px;
   position: relative;
   z-index: 9;
@@ -194,16 +203,6 @@ li {
   font-size: 1.2rem;
 }
 /*navbar*/
-
-a {
-  font-weight: 500;
-  color: pink;
-  text-decoration: none;
-  background-color: none;
-}
-a:hover {
-  color: pink;
-}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -607,6 +606,136 @@ img[alt="about-img"] {
     transform: translateY(0px);
   }
 }
+
+/*achievements*/
+#achievements {
+  margin-top: 2rem;
+  background-color: var(--powder-blue);
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.all-achievements-btn {
+  padding: auto;
+}
+
+/* From Uiverse.io by alexmaracinaru */
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+  font-family: "Share Tech Mono", sans-serif;
+}
+
+#arrow-right {
+  transform: scale(-1, 1);
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.achievement-heading-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.achievement-card {
+  color: #000;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 1.5rem;
+
+  & .item:last-child {
+    border-left: 1px solid var(--gray);
+    padding-left: 0.5rem;
+  }
+}
+
+.achievement-heading-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+
+.achievement-card1{
+  width: 17rem;
+  margin: 1.5rem auto;
+  height: 17rem;
+  display: flex;
+  flex-direction: column;
+  
+
+  &:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.item {
+  width: 50%;
+}
+
+.item-main{
+  margin: auto;
+}
+
+.gray-text {
+  color: var(--gray);
+}
+
+/*achievements*/
 /* ABOUT */
 
 /* PROJECTS */
@@ -914,7 +1043,7 @@ label {
   gap: 20px;
 }
 
-.title {
+.edu-title {
   margin: 20px 0 20px 0;
   font-size: 25px;
   font-weight: 900;
@@ -1214,6 +1343,7 @@ label {
 
 .skill-card {
   margin: 1rem auto;
+  width: 8rem;
 }
 
 img[alt="skill-img"] {
@@ -1259,36 +1389,32 @@ img[alt="skill-img"] {
   margin-bottom: 1rem;
 }
 
-/* .skill-container{
-  display: grid;
-} */
 
 /*skills*/
 
 /*experience*/
-#experience{
+#experience {
   background-color: var(--gray);
   color: var(--bg);
 
-  &h1{
+  &h1 {
     margin-top: 2rem;
     padding-top: 0;
   }
-
 }
 
-.mono-font{
+.mono-font {
   font-family: "Share Tech Mono", sans-serif;
 }
 
-.section-divider{
+.section-divider {
   height: 1px;
   width: 70%;
   background-color: var(--bg);
   margin: 2rem auto;
 }
 
-.experience-row{
+.experience-row {
   display: flex;
   margin: auto;
   align-items: center;
@@ -1302,7 +1428,7 @@ img[alt="skill-img"] {
 .footer {
   text-align: center;
   background-color: var(--yellow);
-  /* margin-top: 2rem; */
+  margin-top: 5rem;
   position: sticky;
   padding: 1.5rem;
   font-family: "Share Tech Mono", sans-serif;
@@ -1377,6 +1503,35 @@ img[alt="skill-img"] {
       padding: 2rem 1.5rem;
     }
   }
+
+  #achievements h1{
+font-size: 2.5rem;
+  }
+
+  .achievement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    padding: 1.2rem;
+
+    & .item:last-child {
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+
+  .item{
+    width: 70%;
+  }
+
+  .achievement-divider {
+    width: 40%;
+    margin: 1rem auto;
+    height: 1px;
+    background-color: var(--gray);
+  }
   /**About*/
 
   /*PROJECTS*/
@@ -1427,13 +1582,13 @@ img[alt="skill-img"] {
     }
   }
 
-  #skills{
-    margin-bottom: 6rem;
+  #skills {
+    margin-bottom: 7rem;
   }
   /*SKILLS*/
 
   /*EXPERIENCE*/
-  .experience-row{
+  .experience-row {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -1442,7 +1597,7 @@ img[alt="skill-img"] {
     text-align: center;
   }
 
-  img[alt="work-img"]{
+  img[alt="work-img"] {
     padding-bottom: 1.5rem;
   }
   /*EXPERIENCE*/

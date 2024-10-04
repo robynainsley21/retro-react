@@ -28,8 +28,6 @@ export default function Resume() {
 
       <Skills data={data} loading={loading} />
 
-      <div className="divider"></div>
-
       <Experience data={data} loading={loading}/>
     </>
   );
