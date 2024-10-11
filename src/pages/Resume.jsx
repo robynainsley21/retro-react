@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+
+// pages
 import Education from "../components/Education";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
-
+import Certifications from "./Certifications";
 export default function Resume() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -29,6 +31,9 @@ export default function Resume() {
       <Skills data={data} loading={loading} />
 
       <Experience data={data} loading={loading}/>
+
+
+      <Certifications data={data} loading={loading}/>
     </>
   );
 }

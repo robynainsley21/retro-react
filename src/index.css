@@ -1582,6 +1582,61 @@ img[alt="skill-img"] {
 }
 
 /*experience*/
+
+/*certifications*/
+#certifications{
+  & h1{
+    font-family: "Share Tech Mono", monospace;
+    text-align: center;
+    font-size: 4rem;
+    margin: 3rem auto;
+  }
+}
+
+#aws-comp{
+  & h1{
+    font-family: "Share Tech Mono", monospace;
+    text-align: center;
+    font-size: 4rem;
+    margin: 11rem auto 3rem;
+  }
+}
+
+.certificate-title{
+  width: 80%;
+  margin: .8rem auto;
+}
+
+img[alt="certificate-img"]{
+  width: 20rem;
+}
+
+.certification-link{
+  margin: 1.5rem auto;
+  display: block;
+}
+
+.certificate-card{
+  margin: 2rem auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certification-heading-box{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-row{
+  background: linear-gradient(to right, var(--oceanblue) 0%, var(--powder-blue) 19%, var(--yellow) 40%, var(--orange) 60%, var(--peach) 83%, var(--oceanblue) 100%);
+  background-size: 10000px 100%;
+  animation: bg 10s linear infinite;
+}
+/*certifications*/
 /*RESUME*/
 
 /*FOOTER*/
@@ -1761,6 +1816,35 @@ font-size: 2.5rem;
     padding-bottom: 1.5rem;
   }
   /*EXPERIENCE*/
+
+  /*CERTIFICATES*/
+  img[alt="certificate-img"] {
+    display: none;
+  }
+
+  .certification-link{
+    margin: 1.5rem auto;
+    display: block;
+  }
+
+  .certificate-card{
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  #aws-comp{
+    & h1{
+      font-size: 3rem;
+    }
+  }
+
+  .certification-heading-box{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  /*CERTIFICATES*/
 
   /*CONTACT*/
   #contact h1{
