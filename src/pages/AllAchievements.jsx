@@ -58,8 +58,7 @@ export default function AllAchievements() {
                   <p>{achievement.details}</p>
                   {achievement.site && (
                     <p>
-                      <Link target="_blank" to={achievement.site}>
-                        {/* From Uiverse.io by alexmaracinaru  */}
+                      {/* <Link target="_blank" to={achievement.site}>
                         <button class="cta">
                           <span class="hover-underline-animation">
                             See more
@@ -79,7 +78,7 @@ export default function AllAchievements() {
                             ></path>
                           </svg>
                         </button>
-                      </Link>
+                      </Link> */}
                     </p>
                   )}
                 </div>

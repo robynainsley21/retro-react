@@ -82,17 +82,23 @@ export default function Contact() {
         </div>
 
         {/* From Uiverse.io by D3OXY  */}
-        <form action="" className="form">
-          <input type="text" placeholder="First name" name="name" />
-          <input type="text" placeholder="Last name" name="surname" />
-          <input type="email" placeholder="Email" name="email" />
+        <form
+          action="https://formspree.io/f/xqakkzqy"
+          method="POST"
+          target="_blank"
+          className="form"
+        >
+          <input required type="text" placeholder="First name" name="name" />
+          <input required type="text" placeholder="Last name" name="surname" />
+          <input required type="email" placeholder="Email" name="email" />
 
           <textarea
             placeholder="Your message"
             name="message"
             id="contact-msg"
           ></textarea>
-          <button className="oauthButton">
+          <div className="d-flex w-100">
+          <button type="submit" className="oauthButton">
             Send
             <svg
               className="icon"
@@ -110,6 +116,9 @@ export default function Contact() {
               <path d="m13 17 5-5-5-5"></path>
             </svg>
           </button>
+          <button className="oauthButton" type="reset">Clear</button>
+          </div>
+
         </form>
       </div>
     </div>

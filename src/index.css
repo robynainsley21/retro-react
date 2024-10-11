@@ -89,100 +89,51 @@ li {
 /*general*/
 
 /*Loader*/
-/* From Uiverse.io by mobinkakei */
-.spinner-wrapper {
-  width: 200px;
+/* From Uiverse.io by mrpumps31232 */ 
+.loading-wave {
+  margin: auto;
+  width: 300px;
+  height: 100px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 2rem auto;
-  height: 60px;
-  position: relative;
-  z-index: 9;
+  align-items: flex-end;
 }
 
-.circle {
+.loading-bar {
   width: 20px;
-  height: 20px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: orange;
-  left: 15%;
-  transform-origin: 50%;
-  animation: circle7124 0.5s alternate infinite ease;
+  height: 10px;
+  margin: 0 5px;
+  background-color: var(--oceanblue);
+  border-radius: 5px;
+  animation: loading-wave-animation 1s ease-in-out infinite;
 }
 
-@keyframes circle7124 {
-  0% {
-    top: 60px;
-    height: 5px;
-    border-radius: 50px 50px 25px 25px;
-    transform: scaleX(1.7);
-  }
-
-  40% {
-    height: 20px;
-    border-radius: 50%;
-    transform: scaleX(1);
-  }
-
-  100% {
-    top: 0%;
-  }
+.loading-bar:nth-child(2) {
+  animation-delay: 0.1s;
 }
 
-.circle:nth-child(2) {
-  left: 45%;
+.loading-bar:nth-child(3) {
   animation-delay: 0.2s;
 }
 
-.circle:nth-child(3) {
-  left: auto;
-  right: 15%;
+.loading-bar:nth-child(4) {
   animation-delay: 0.3s;
 }
 
-.shadow {
-  width: 20px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: absolute;
-  top: 62px;
-  transform-origin: 50%;
-  z-index: -1;
-  left: 15%;
-  filter: blur(1px);
-  animation: shadow046 0.5s alternate infinite ease;
-}
-
-@keyframes shadow046 {
+@keyframes loading-wave-animation {
   0% {
-    transform: scaleX(1.5);
+    height: 10px;
   }
 
-  40% {
-    transform: scaleX(1);
-    opacity: 0.7;
+  50% {
+    height: 50px;
   }
 
   100% {
-    transform: scaleX(0.2);
-    opacity: 0.4;
+    height: 10px;
   }
 }
 
-.shadow:nth-child(4) {
-  left: 45%;
-  animation-delay: 0.2s;
-}
-
-.shadow:nth-child(5) {
-  left: auto;
-  right: 15%;
-  animation-delay: 0.3s;
-}
 
 /*Loader*/
 
@@ -984,9 +935,8 @@ label {
   justify-content: center;
   align-items: center;
   gap: 5px;
-    /* margin: 50px auto 0 auto; */
   padding: auto 15px 15px auto;
-  width: 250px;
+  width: 45%;
   margin: auto;
   height: 40px;
   border-radius: 5px;
@@ -1784,11 +1734,6 @@ font-size: 2.5rem;
   /*PROJECTS*/
 
   /*SKILLS*/
-  /* .skill-card{
-    width: 70%;
-    margin-bottom: 2.5rem;
-  } */
-
   :is(#skills, #education, #experience) {
     & h1 {
       font-family: "Share Tech Mono", monospace;
@@ -1860,6 +1805,10 @@ font-size: 2.5rem;
 
   .contact-details{
     margin:2rem auto ;
+  }
+
+  .oauthButton{
+    width: 10rem;
   }
 
   .form{
