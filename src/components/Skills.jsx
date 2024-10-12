@@ -5,7 +5,7 @@ export default function Skills({ data, loading }) {
 
   return (
     <>
-      <div className="row" id="skills" data-aos="fade-up">
+      <div className="row" id="skills">
         <h1 data-aos="fade-up">Skills</h1>
         <div className="row skill-row">
           {data.skills.map((skill) => (
