@@ -1437,7 +1437,6 @@ textarea{
 
 #skills{
   margin: 6rem auto;
-  height: 60vh;
 }
 
 #skills h1{
@@ -1448,7 +1447,7 @@ textarea{
 
 .skill-row{
   padding: 2rem;
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
@@ -1605,6 +1604,17 @@ img[alt="certificate-img"]{
 /*mobile*/
 @media screen and (max-width: 768px) {
   /**Home*/
+  :is(
+    #projects,
+    #about,
+    #contact,
+    #education,
+    #experience,
+    #all-achievements
+  ) {
+    padding-top: 7rem;
+}
+
   .home-hero {
     margin-top: 2rem;
     display: flex;
@@ -1659,7 +1669,6 @@ img[alt="certificate-img"]{
   }
 
   #about {
-    margin-top: 6rem;
 
     & h1 {
       font-family: "Share Tech Mono", monospace;
@@ -1701,11 +1710,11 @@ font-size: 2.5rem;
 
   /*PROJECTS*/
   #projects {
+    margin-top: 0;
     & h1 {
       font-family: "Share Tech Mono", monospace;
       font-size: 3rem;
       text-align: center;
-      padding-top: 7rem;
     }
   }
 
@@ -1763,6 +1772,15 @@ font-size: 2.5rem;
   /*EXPERIENCE*/
 
   /*CERTIFICATES*/
+  #certifications{
+    & h1{
+      font-family: "Share Tech Mono", monospace;
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 3rem auto;
+    }
+  }
+
   img[alt="certificate-img"] {
     display: none;
   }
@@ -1793,7 +1811,7 @@ font-size: 2.5rem;
 
   /*CONTACT*/
   #contact h1{
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     width: 90%;
     margin: auto;
   }

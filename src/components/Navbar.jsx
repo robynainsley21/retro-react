@@ -29,7 +29,7 @@ export default function Navbar() {
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div className="offcanvas-header">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/" data-bs-dismiss="offcanvas">
               <img
                 src="https://robynainsley21.github.io/images/images/Portfolio logo (1).png"
                 alt="logo"
@@ -46,27 +46,27 @@ export default function Navbar() {
           <div className="offcanvas-body">
             <ul className="navbar-nav fw-bolder ms-auto">
               <li className="nav-item">
-                <Link className="nav-link font-weight-bold" to="/">
+                <Link className="nav-link font-weight-bold" to="/" data-bs-dismiss="offcanvas">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link" to="/about" data-bs-dismiss="offcanvas">
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/resume">
+                <Link className="nav-link" to="/resume" data-bs-dismiss="offcanvas">
                   Education & Experience
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">
+                <Link className="nav-link" to="/projects" data-bs-dismiss="offcanvas">
                   Projects
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">
+                <Link className="nav-link" to="/contact" data-bs-dismiss="offcanvas">
                   Contact
                 </Link>
               </li>
