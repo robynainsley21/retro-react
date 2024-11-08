@@ -16,7 +16,7 @@
   --oceanblue: #3085c3;
   --orange: #fc6736;
   --gray: #686d76;
-  --powder-blue:#B4D6CD ;
+  --powder-blue: #b4d6cd;
 }
 
 /*scrollbar*/
@@ -70,14 +70,7 @@ li {
   list-style: none;
 }
 
-:is(
-    #projects,
-    #about,
-    #contact,
-    #education,
-    #experience,
-    #all-achievements
-  ) {
+:is(#projects, #about, #contact, #education, #experience, #all-achievements) {
   padding-top: 8rem;
   & h1 {
     font-family: "Share Tech Mono", monospace;
@@ -89,7 +82,7 @@ li {
 /*general*/
 
 /*Loader*/
-/* From Uiverse.io by mrpumps31232 */ 
+/* From Uiverse.io by mrpumps31232 */
 .loading-wave {
   margin: auto;
   width: 300px;
@@ -133,7 +126,6 @@ li {
     height: 10px;
   }
 }
-
 
 /*Loader*/
 
@@ -658,22 +650,21 @@ a {
   }
 }
 
-.achievement-heading-main{
+.achievement-heading-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem;
 }
 
-.achievement-card1{
+.achievement-card1 {
   width: 17rem;
   margin: 1.5rem auto;
   height: 17rem;
   display: flex;
   flex-direction: column;
-  
 
-  &:last-child{
+  &:last-child {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -684,7 +675,7 @@ a {
   width: 50%;
 }
 
-.item-main{
+.item-main {
   margin: auto;
 }
 
@@ -700,20 +691,28 @@ img[alt="project-img"] {
   width: 100%;
 }
 
-.github-row{
+.github-row {
   padding: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 4rem;  
+  height: 4rem;
 
-  background: linear-gradient(to right, var(--oceanblue) 0%, var(--powder-blue) 19%, var(--yellow) 40%, var(--orange) 60%, var(--peach) 83%, var(--oceanblue) 100%);
+  background: linear-gradient(
+    to right,
+    var(--oceanblue) 0%,
+    var(--powder-blue) 19%,
+    var(--yellow) 40%,
+    var(--orange) 60%,
+    var(--peach) 83%,
+    var(--oceanblue) 100%
+  );
   background-size: 10000px 100%;
   animation: bg 10s linear infinite;
 
-  & a{
+  & a {
     color: var(--black);
     text-align: center;
   }
@@ -752,7 +751,7 @@ img[alt="project-img"] {
   justify-content: center;
   align-items: center;
   width: 100%;
-  
+
   margin: 0;
 }
 
@@ -891,7 +890,7 @@ label {
   }
 }
 /*form*/
-/* From Uiverse.io by D3OXY */ 
+/* From Uiverse.io by D3OXY */
 /* DEOXY Was Here */
 .form {
   --background: #d3d3d3;
@@ -953,7 +952,8 @@ label {
   z-index: 1;
 }
 
-.form > input, textarea {
+.form > input,
+textarea {
   width: 90%;
   margin: auto;
   height: 40px;
@@ -968,11 +968,11 @@ label {
   outline: none;
 }
 
-textarea{
+textarea {
   height: 7rem;
 }
 
-.contact-container{
+.contact-container {
   margin-top: 2rem;
   font-family: "Share Tech Mono", sans-serif;
 
@@ -981,19 +981,19 @@ textarea{
   align-items: center;
 }
 
-.contact-details{
+.contact-details {
   font-size: 1.2rem;
   /* display: flex;
   flex-direction: column;
   justify-content: space-between; */
 
-  & span{
+  & span {
     font-size: 1.2rem;
   }
 }
 
-.contact-item{
-  margin: 1rem ;
+.contact-item {
+  margin: 1rem;
 }
 
 /*form*/
@@ -1435,17 +1435,17 @@ textarea{
   }
 }
 
-#skills{
+#skills {
   margin: 6rem auto;
 }
 
-#skills h1{
+#skills h1 {
   font-family: "Share Tech Mono", monospace;
   font-size: 4rem;
   text-align: center;
 }
 
-.skill-row{
+.skill-row {
   padding: 2rem;
   width: 80%;
   margin: auto;
@@ -1533,8 +1533,8 @@ img[alt="skill-img"] {
 /*experience*/
 
 /*certifications*/
-#certifications{
-  & h1{
+#certifications {
+  & h1 {
     font-family: "Share Tech Mono", monospace;
     text-align: center;
     font-size: 4rem;
@@ -1542,8 +1542,8 @@ img[alt="skill-img"] {
   }
 }
 
-#aws-comp{
-  & h1{
+#aws-comp {
+  & h1 {
     font-family: "Share Tech Mono", monospace;
     text-align: center;
     font-size: 4rem;
@@ -1551,21 +1551,21 @@ img[alt="skill-img"] {
   }
 }
 
-.certificate-title{
+.certificate-title {
   width: 80%;
-  margin: .8rem auto;
+  margin: 0.8rem auto;
 }
 
-img[alt="certificate-img"]{
+img[alt="certificate-img"] {
   width: 20rem;
 }
 
-.certification-link{
+.certification-link {
   margin: 1.5rem auto;
   display: block;
 }
 
-.certificate-card{
+.certificate-card {
   margin: 2rem auto;
   text-align: center;
   display: flex;
@@ -1573,15 +1573,23 @@ img[alt="certificate-img"]{
   align-items: center;
 }
 
-.certification-heading-box{
+.certification-heading-box {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
 }
 
-.certificate-row{
-  background: linear-gradient(to right, var(--oceanblue) 0%, var(--powder-blue) 19%, var(--yellow) 40%, var(--orange) 60%, var(--peach) 83%, var(--oceanblue) 100%);
+.certificate-row {
+  background: linear-gradient(
+    to right,
+    var(--oceanblue) 0%,
+    var(--powder-blue) 19%,
+    var(--yellow) 40%,
+    var(--orange) 60%,
+    var(--peach) 83%,
+    var(--oceanblue) 100%
+  );
   background-size: 10000px 100%;
   animation: bg 10s linear infinite;
 }
@@ -1678,8 +1686,8 @@ img[alt="certificate-img"]{
     }
   }
 
-  #achievements h1{
-font-size: 2.5rem;
+  #achievements h1 {
+    font-size: 2.5rem;
   }
 
   .achievement-card {
@@ -1696,7 +1704,7 @@ font-size: 2.5rem;
     }
   }
 
-  .item{
+  .item {
     width: 70%;
   }
 
@@ -1785,23 +1793,27 @@ font-size: 2.5rem;
     display: none;
   }
 
-  .certification-link{
+  #certifications h1 {
+    font-size: 2.5rem;
+  }
+
+  .certification-link {
     margin: 1.5rem auto;
     display: block;
   }
 
-  .certificate-card{
+  .certificate-card {
     margin: 2rem auto;
     text-align: center;
   }
 
-  #aws-comp{
-    & h1{
+  #aws-comp {
+    & h1 {
       font-size: 3rem;
     }
   }
 
-  .certification-heading-box{
+  .certification-heading-box {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -1811,29 +1823,29 @@ font-size: 2.5rem;
 
   /*CONTACT*/
   #contact h1{
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     width: 90%;
     margin: auto;
   }
-  .contact-container{
+  .contact-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
 
-  .contact-details{
-    margin:2rem auto ;
+  .contact-details {
+    margin: 2rem auto;
   }
 
-  .oauthButton{
+  .oauthButton {
     width: 10rem;
   }
 
-  .form{
+  .form {
     margin: 2rem auto;
     width: 80%;
 
-    & :is(input, textarea, .oauthButton){
+    & :is(input, textarea, .oauthButton) {
       width: 100%;
     }
   }
