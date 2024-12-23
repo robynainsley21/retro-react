@@ -27,9 +27,9 @@ export default function Home() {
           <h2>Robyn Carnow</h2>
           <h5>{data.jobTitle[0].title}</h5>
           <div className="home-socials">
-            <ul class="social-wrapper">
-              <li class="icon linkedIn">
-                <span class="tooltip">LinkedIn</span>
+            <ul className="social-wrapper">
+              <li className="icon linkedIn">
+                <span className="tooltip">LinkedIn</span>
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/in/robyn-carnow-2b0762267/"
@@ -45,8 +45,8 @@ export default function Home() {
                   </svg>
                 </a>
               </li>
-              <li class="icon github">
-                <span class="tooltip">GitHub</span>
+              <li className="icon github">
+                <span className="tooltip">GitHub</span>
                 <a
                   className="home-link"
                   target="_blank"
@@ -57,7 +57,7 @@ export default function Home() {
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="github"
+                    className="github"
                   >
                     <path d="M12 .296c-6.63 0-12 5.37-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.261.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.386-1.332-1.755-1.332-1.755-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.806 1.305 3.492.998.108-.776.418-1.305.76-1.605-2.665-.305-5.467-1.332-5.467-5.932 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.004-.404c1.02.005 2.047.137 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.243 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.624-5.48 5.922.43.37.812 1.1.812 2.22 0 1.605-.015 2.896-.015 3.293 0 .319.217.694.825.576C20.565 22.092 24 17.593 24 12.296c0-6.63-5.37-12-12-12z" />
                   </svg>
